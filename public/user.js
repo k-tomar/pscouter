@@ -28,7 +28,7 @@ app.controller('userData', function ($scope, $http, $state)
     $scope.updatedProfile = {};
     $http.get("/user")
         .success(function(data) {
-            console.log("user", data);
+            // console.log("user", data);
             $scope.userData = data;
         })
         .error(function(err) {
@@ -37,7 +37,7 @@ app.controller('userData', function ($scope, $http, $state)
         });
     $scope.userProfile = function(user) {
         $scope.userProfileData = user;
-        console.log("user data", $scope.userProfileData);
+        // console.log("user data", $scope.userProfileData);
         $state.go("userProfile");
     };
     $scope.editProfile = function() {
@@ -48,7 +48,7 @@ app.controller('userData', function ($scope, $http, $state)
     };
     $scope.saveProfile = function(userProfileData) {
         $scope.updatedProfile = userProfileData;
-        console.log("updated profile", $scope.updatedProfile);
+        // console.log("updated profile", $scope.updatedProfile);
         $http.put("/user", $scope.updatedProfile)
             .success(function(data) {
                 for (var i = 0; i < $scope.userData.length; i++) {
@@ -57,7 +57,7 @@ app.controller('userData', function ($scope, $http, $state)
                         $scope.userData[i] = angular.copy(userProfileData);
                     }
                 };
-                console.log("Updated user", data);
+                // console.log("Updated user", data);
                 $state.go("user");
                 $scope.userProfileData ={};
             })
