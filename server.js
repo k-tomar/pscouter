@@ -19,7 +19,8 @@ console.log('Server run on port: %d', process.env.PORT || 2000);*/
     console.log("App listening on port 8080");
 
 
-var url = "mongodb://localhost/userData-test";
+// var url = "mongodb://localhost/userData-test";
+var url = "mongodb://user:pass@ds027809.mongolab.com:27809/userdata";
 mongoose.connect(url, function(err, ff){
 	if (err) {
 	return console.log(err);
