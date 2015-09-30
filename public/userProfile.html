@@ -1,0 +1,72 @@
+<form name ="myform">
+	<div>
+		<center>
+			<h1>User Profile</h1>
+		</center>
+		<div>
+			<div align="right">
+				<button ng-click="editProfile()">Edit Profile</button>
+			</div>
+	
+		</div>
+		<div class="edt_prf_wrapper">
+			<div class="edit_col">
+				<div class="edit_img">
+					<img src="nophoto.jpg" class="img img-responsive" alt="User Image" style="width:150px;">
+				</div>
+				<div class="edit_txt">
+					<h3>{{ userProfileData.First_Name }}&nbsp;{{ userProfileData.Last_Name }}</h3>
+					<p ng-if="userProfileData.Phd_University != '' ">{{ userProfileData.Phd_University }}</p>
+    				<p ng-if="userProfileData.Phd_University == '' && userProfileData.MS_University != ''">{{ userProfileData.MS_University}}</p>
+    				<p ng-if="userProfileData.Phd_University == '' && userProfileData.MS_University == '' && userProfileData.BS_University != ''">{{ userProfileData.BS_University}}</p>
+				</div>
+			</div>
+
+			<div class="edit_col">
+			<h3>Education:</h3>
+			<ul>
+				<li>
+					<span class="fir_label">
+						<span ng-if="userProfileData.Phd_Degree != '' ">{{ userProfileData.Phd_Degree }}  &boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;</span>
+					</span>
+					<span class="secnd_label">
+					  <span ng-if="userProfileData.Phd_University != '' ">{{ userProfileData.Phd_University }}</span>
+					</span>
+
+				</li>
+
+				<li>
+					<span class="fir_label">
+						<span ng-if="userProfileData.MS_Degree != '' ">{{ userProfileData.MS_Degree }}  &boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;</span>
+					</span>
+					<span class="secnd_label">
+					  <span ng-if="userProfileData.MS_University != '' ">{{ userProfileData.MS_University }}</span>
+					</span>
+
+				</li>
+
+				<li>
+					<span class="fir_label">
+						<span ng-if="userProfileData.BS_Degree != '' ">{{ userProfileData.BS_Degree }}  &boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;</span>
+					</span>
+					<span class="secnd_label">
+					  <span ng-if="userProfileData.BS_University != '' ">{{ userProfileData.BS_University }}</span>
+					</span>
+
+				</li>
+
+			</ul>
+
+			</div>
+
+			<div class="edit_col">
+				<h3>Contact:</h3>
+				<p>
+					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> {{userProfileData.Phone_Number}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{userProfileData.Email}}
+				</p>
+				<p><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> {{userProfileData.Location}}</p>	
+			</div>
+		</div>
+	</div>
+</form>

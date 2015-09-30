@@ -1,0 +1,35 @@
+.edt_prf_wrapper{width:100%; float:left;}
+.edit_col{width: 100%; float: left;}
+.edit_img{ float: left;
+    margin-right: 10px;
+    width: 130px;}
+.edit_txt{  float: left;
+    font-size: 23px;
+    margin-left: 10px;
+    width: auto;}
+.edit_txt p{font-size: 12px; margin-bottom: 10px; padding: 0px; margin-top: 0;}
+.edit_col{width: 100%; float: left}
+.edit_col ul{margin: 0px; padding: 0px;}
+.edit_col ul li{width: 100%; float: left; font-size: 14px; list-style: none; margin-bottom: 10px;}
+.edit_col ul li span.fir_label{ float: left;
+    font-weight: bold;
+    padding-right: 10px;
+    width: auto;}
+.edit_col ul li span.secnd_label{width: auto; float: left; padding-right: 10px;}
+.row.bottom{
+	border-bottom: 2px solid #666;
+	padding: 5px 0;
+}
+.row.border-top{
+	border-top: 2px solid #666;
+}
+.row.even{
+	/*background-color: #eee;*/
+}
+.img {
+    border: 2px solid #666;
+    border-radius: 10px;
+}
+.form-inline .form-control{
+	margin: 2px 0;
+}

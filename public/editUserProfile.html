@@ -1,0 +1,41 @@
+<form name ="myform" class="form-inline">
+	<div>
+		<center>
+			<h1>User Profile</h1>
+		</center>
+		<div align="right">
+			<button ng-click="cancel()">Cancel</button>
+			<button ng-click="saveProfile(userProfileData)">Save Profile</button>
+		</div>
+		<div>
+			<img src="nophoto.jpg" class="img img-responsive" alt="User Image" style="width:150px;"><br>
+		</div>
+		<div>
+			<input class="form-control" type="text" ng-model="userProfileData.First_Name" size="18">
+			<input class="form-control" type="text" ng-model="userProfileData.Last_Name" size="18">
+		</div>
+		<div>
+			<input class="form-control" type="text" ng-model="userProfileData.Phd_University" size="39">
+		</div>
+		<h3>Education</h3>
+		<div>
+			<input class="form-control" type="text" ng-model="userProfileData.Phd_Degree" size="40"> &boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;
+			<input class="form-control" type="text" ng-model="userProfileData.Phd_University" size="40"><br>
+		</div>
+		<div>
+			<input class="form-control" type="text" ng-model="userProfileData.MS_Degree" size="40"> &boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;
+			<input class="form-control" type="text" ng-model="userProfileData.MS_University" size="40"><br>
+		</div>
+		<div>
+			<input class="form-control" type="text" ng-model="userProfileData.BS_Degree" size="40"> &boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;
+			<input class="form-control" type="text" ng-model="userProfileData.BS_University" size="40"><br>
+		</div>
+		<h3>Contact</h3>
+		<div>
+			<input class="form-control" type="text" ng-model="userProfileData.Phone_Number" size="50"><br>
+			<input class="form-control" type="text" ng-model="userProfileData.Email" size="50"><br>
+			<input class="form-control" type="text" ng-model="userProfileData.Location" size="50" >			
+		</div>
+	</div>
+	<br><br><br>
+</form>
