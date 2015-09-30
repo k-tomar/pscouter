@@ -12,7 +12,7 @@ app.use(bodyParser());
 app.use(methodOverride()); 					
 
 app.listen(process.env.PORT || 3000)
-console.log('Server run on port: %d', process.env.PORT || 3000);*/
+console.log('Server run on port: %d', process.env.PORT || 3000);
 
 // var url = "mongodb://localhost/userData-test";
 var url = "mongodb://user:pass@ds027809.mongolab.com:27809/userdata";
