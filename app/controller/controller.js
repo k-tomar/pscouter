@@ -14,7 +14,7 @@ exports.get_users = function (req,res)
 		}
 		else
 		{
-			console.log(result);
+			// console.log(result);
 			res.jsonp(result);
 		}
 	});
@@ -36,7 +36,7 @@ exports.update_users = function (req,res)
 		}
 		else
 		{
-			console.log(result);
+			// console.log(result);
 			res.jsonp(result);
 		}
 	});
