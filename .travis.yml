@@ -4,4 +4,4 @@ node_js:
 install:
  - npm install -g firebase-tools
 after_success:
- - firebase deploy --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
+ - echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy
